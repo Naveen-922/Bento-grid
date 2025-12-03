@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento-Grid</title>
+    <style>
+
+        @font-face 
+        {
+            font-family: "DMSans-Italic-VariableFont";
+            src: url(./DMSans-Italic-VariableFont_opsz\,wght.ttf);
+        }
+
+         @font-face 
+        {
+            font-family: "DMSans-VariableFont";
+            src: url(./DMSans-VariableFont_opsz\,wght.ttf);
+        }
+
+        body
+        {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .body-cont
+        {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-image: url(./5.jpg);
+            background-size: cover;
+            background-repeat: no-repeat; */
+        }
+        .grid-cont
+        {
+            border: none 2px;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 55%;
+            height: 80%;
+            background-color: rgba(245, 245, 245);
+            box-shadow: 2px 2px 16px 2px rgba(0, 0, 0, 0.25);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            /* justify-content: center;
+            align-content: center; */
+            grid-template-areas: 
+            "c1 c2 c2 c3"
+            "c1 c2 c2 c3"
+            "c1 c4 c5 c3"
+            "c6 c4 c5 c3"
+            "c6 c7 c8 c8"
+            "c6 c7 c8 c8";
+        }
+
+        .b-1
+        {
+            grid-area: c1;
+            border: 2px none;
+            border-radius: 10px;
+            background-color: rgba(250, 238, 226);
+            overflow: hidden;
+            font-family: "DMSans-VariableFont";
+            font-size: 1.75rem;
+            line-height: 25px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            justify-content: center;
+            align-items: center;  
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+        .b-1 > div > i
+        {
+            color: rgba(118, 83, 204);
+        }
+
+
+        .b-2
+        {
+            grid-area: c2;
+            border: 2px none;
+            border-radius: 10px;
+            background-color: rgba(118, 81, 220);
+            overflow: hidden;
+            font-family: "DMSans-VariableFont";
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .b2-t1
+        {
+            font-family: "DMSans-VariableFont";
+            font-size: 2.5rem;
+            text-align: center;
+            line-height: 35px;
+            color: white;
+        }
+        .b2-t1 > span
+        {
+            color: rgb(250, 197, 119);
+        }
+        .b2-t2
+        {
+            font-family: "DMSans-VariableFont";
+            color: white;
+            font-size: .85rem;
+            word-spacing: 4px;
+            font-weight: 200;
+        }
+
+
+        .b-3
+        {
+            grid-area: c3;
+            border: 2px none;
+            border-radius: 10px;
+            background-color: rgba(220, 209, 252);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 30px;
+        }
+        .b3-t1
+        {
+            font-size: 1.3rem;
+            font-family: "DMSans-VariableFont";
+            font-weight: 600;
+            line-height: 18px;
+            word-spacing: -1px;
+
+        }
+        .b3-t2
+        {
+            font-size: .7rem;
+            font-family: "DMSans-VariableFont";
+            font-weight: 550;
+        }
+
+
+        .b-4
+        {
+             grid-area: c4;
+            border-radius: 10px;
+            border: 2px none;
+            background-color: white;
+            overflow: hidden;
+            font-family: "DMSans-VariableFont";
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 19px;
+            letter-spacing: -1px;
+        }
+
+        .b-5
+        {
+             grid-area: c5;
+            border-radius: 10px;
+            border: 2px none;
+            background-color: rgba(255, 204, 105);
+            overflow: hidden;
+            font-family: "DMSans-VariableFont";
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            padding: 20px;
+            padding-top: 100px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 19px;
+            letter-spacing: -1px;
+        }
+
+
+        .b-6
+        {
+             grid-area: c6;
+            border-radius: 10px;
+            border: 2px none;
+            background-color: rgba(255, 204, 105);
+            overflow: hidden;
+             font-family: "DMSans-VariableFont";
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding-left: 20px;
+            text-align: left;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: -1px;
+        }
+
+        .b-7
+        {
+             grid-area: c7;
+            border-radius: 10px;
+            border: 2px none;
+            background-color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 15px;
+        }
+        .b7-t1
+        {
+            font-family: "DMSans-VariableFont";
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .b7-t2
+        {
+            font-family: "DMSans-VariableFont";
+            font-size: .9rem;
+            font-weight: 400;
+        }
+
+        .b-8
+        {
+             grid-area: c8;
+            border: 2px none;
+            border-radius: 10px;
+            background-color: rgba(118, 81, 220);
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+        .b8-t1
+        {
+            font-family: "DMSans-VariableFont";
+            font-size: 1.7rem;
+            color: white;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: -1px;
+        }
+
+
+        @media only screen and (max-width:300px)
+        {
+            .body-cont
+            {
+               width: 100%;
+               height: 300vh;
+            }
+
+            .grid-cont
+            {
+                height: 100%;
+                width: 100%;
+                display: grid;
+                padding: 0%;
+                grid-template-columns: repeat(1, minmax(250px, 1fr));
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 15px;
+                grid-template-areas: 
+                     "c1"
+                     "c1"
+                     "c2"
+                     "c2"
+                     "c3"
+                     "c3"
+                     "c4"
+                     "c4"
+                     "c5"
+                     "c5"
+                     "c6"
+                     "c6"
+                     "c7"
+                     "c7"
+                     "c8"
+                     "c8";
+
+            }
+
+            .b-1, .b-2, .b-3, .b-4, .b-5, .b-6, .b-7, .b-8
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+            }
+            .b-3
+            {
+                font-size: 1rem;
+            }
+
+            .b-5
+            {
+                padding-top: 10px;
+            }
+
+            .b-8 > img
+            {
+                width: 150px;
+
+
+            }
+            .b8-t1
+            {
+                font-size: 1.3rem;
+            }
+        } 
+    </style>
+</head>
+
+<body>
+   <section class="body-cont">
+    <section class="grid-cont">
+
+        <div class="b-1">
+            <div>Create and<br>schedule<br>content<br><i>quicker</i></div>
+            <img src="./illustration-create-post.webp" width="150px">
+        </div>
+
+        <div class="b-2">
+            <div class="b2-t1">Social Media <span>10x</span><br> <i>Faster</i> with AI</div>
+            <img src="./illustration-five-stars.webp" width="160px">
+            <div class="b2-t2">Over 4,000 5-star reviews</div>
+        </div>
+
+        <div class="b-3">
+            <div class="b3-t1">Schedule to <br> social media</div>
+            <img src="./illustration-schedule-posts.webp" height="200px">
+            <div class="b3-t2">Optimize post timings<br> to publish content at<br> the perfect time for<br> your audience.</div>
+        </div>
+
+        <div class="b-4">
+            <img src="./illustration-multiple-platforms.webp" height="50px">
+            Manage <br>multiple<br> accounts and<br> platforms.
+        </div>
+
+        <div class="b-5">
+            Maintain a <br>consistent<br> posting<br> schedule.
+            <img src="./illustration-consistent-schedule.webp" width="160px">
+        </div>
+
+        <div class="b-6">
+             Write your <br> content <br> using AI.
+             <img src="./illustration-ai-content.webp" width="170px">
+        </div>
+
+        <div class="b-7">
+            <div class="b7-t1">>56%</div>
+            <div class="b7-t2">faster audience growth</div>
+            <img src="./illustration-audience-growth.webp" width="150px">
+        </div>
+
+        <div class="b-8">
+            <img src="./illustration-grow-followers.webp" width="190px">
+            <div class="b8-t1">Grow followers<br> with non-stop<br> content.</div>
+
+        </div>
+    </section>
+ </section> 
+    
+</body>
+</html>
